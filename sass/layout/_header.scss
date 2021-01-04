@@ -1,0 +1,32 @@
+header {
+    height: 10.1rem;
+    .header {
+        height: 9.5rem;
+        position: relative;
+        background-color: $header-color;
+
+        & > * { margin: 0 4rem;}
+         
+        &__title {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            h1 {
+                &::after {
+                    height: 100%;
+                    width: 100%;
+                    content: "\002A";
+                    color: $crimson-color;
+                    font-size: inherit;
+                }
+            }
+        }
+
+        &__bottom {
+            display: block;
+            height: .6rem;
+            background-color: #323746;
+        }
+    }
+}

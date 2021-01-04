@@ -1,0 +1,31 @@
+.footer {
+    position: relative;
+    height: 7.6rem;
+    background-color: #2d303a;
+
+    & > * { margin: 0 4rem; }
+
+    &__copyright {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: inline-block;
+        vertical-align: center;
+        color: #666d89;
+        font-size: 1.2rem;
+      }
+
+    &__social {
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) scale(0.8);
+    }
+  }
+  
+  
+  
+
+  

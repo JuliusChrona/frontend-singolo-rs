@@ -1,0 +1,67 @@
+.about { height: 72.8rem;}
+
+.info { padding: 5rem 4rem 3rem 4rem; }
+
+.container-about {
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    .author:not(:last-child) { margin-right: 2rem;}
+
+    .author {
+        overflow: hidden;
+        &__image {
+            height: 30rem;
+            width: 30rem;
+        }
+    
+        &__name {
+            display: inline;
+            font-size: 1.8rem;
+            color: #767e9e;
+            white-space: nowrap;
+        }
+    
+        &__text {
+            color: #666d89;
+            font-size: 1.1rem;
+        }
+    
+    }
+}
+
+.social {
+    margin-top: 2rem;
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        height: 3.2rem;
+        width: 3.2rem;
+        border-radius: 50rem;
+        border: 1.2px solid #666d89;
+        transition: all .3s;
+
+        margin: 0 .5rem;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {  
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__pict {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

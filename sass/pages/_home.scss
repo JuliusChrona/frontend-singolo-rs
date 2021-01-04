@@ -1,0 +1,49 @@
+.section-slider {
+    background-color: $crimson-color;
+    height: 61.5rem;
+
+    &__bottom {
+        height: $endline-height;
+        background-color: #ea676b;
+    }
+}
+
+.section-services {    
+    height: 50.1rem;
+    background-color: #f2f2f2;
+
+    &__bottom {
+        height: $endline-height;
+        background-color: $color-white;
+    }
+}
+
+.section-portfolio {
+    height: 87.6rem;
+    background-color: #2d303a;
+
+    &__bottom {
+        height: $endline-height;
+        background-color: #323746;
+    }
+}
+
+.section-about {
+    height: 73.4rem;
+    background-color: #f2f2f2;
+    
+    &__bottom {
+        height: $endline-height;
+        background-color: $color-white;
+    }
+}
+
+.section-quote {
+    height: 65.4rem;
+    background-color: #f06c64;
+
+    &__bottom {
+        height: $endline-height;
+        background-color: #ea676b;
+      }
+  }

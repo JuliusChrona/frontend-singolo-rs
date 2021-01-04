@@ -1,0 +1,42 @@
+.slider { 
+    height: 60.7rem;
+    position: relative;
+    &__phone {
+
+        &--vertical {
+            position: absolute;
+            top: 22%;
+            left: 12%;
+        }
+
+        &--horizontal {
+            position: absolute;
+            top: 37%;
+            right: 8%;
+        }
+    }
+
+    
+    &__arrow {
+        transition: all .2s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+
+        &--prev {
+            position: absolute;
+            top: 50%;
+            left: 3%;
+        }
+
+        &--next {
+            position: absolute;
+            top: 50%;
+            right: 3%;
+        }
+    }
+
+
+}
