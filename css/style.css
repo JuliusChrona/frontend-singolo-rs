@@ -447,7 +447,8 @@ header {
   html {
     font-size: 60%; }
   body {
-    width: 100%; }
+    width: 100%;
+    margin-top: 20%; }
   header {
     position: fixed;
     top: 0;
