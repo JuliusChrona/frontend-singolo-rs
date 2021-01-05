@@ -1,7 +1,12 @@
-.navigation{
+.navigation {
     height: 100%;
     position: relative;
     
+    &__checkbox,
+    &__button {
+        display: none;
+    }
+
     &__list {
         margin-left: 10rem;
         list-style: none;

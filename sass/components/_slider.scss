@@ -1,18 +1,31 @@
-.slider { 
-    height: 60.7rem;
+.slider {
+    max-height: 60.7rem;
+    height: 80.4vw;
+    width: 100%;
     position: relative;
     &__phone {
 
         &--vertical {
             position: absolute;
-            top: 22%;
+            top: 15%;
             left: 12%;
+
+            img {
+                max-height: 46rem;
+                height: 46vw;
+            }
         }
 
         &--horizontal {
             position: absolute;
             top: 37%;
             right: 8%;
+
+            img {
+                max-width: 48rem;
+                width: 47vw;
+            }
+
         }
     }
 
@@ -22,19 +35,21 @@
 
         &:hover {
             cursor: pointer;
-            transform: scale(1.2);
+            transform: scale(1.2) translateY(-50%);
         }
 
         &--prev {
             position: absolute;
             top: 50%;
             left: 3%;
+            transform: translateY(-50%);
         }
 
         &--next {
             position: absolute;
             top: 50%;
             right: 3%;
+            transform: translateY(-50%);
         }
     }
 
