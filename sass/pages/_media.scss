@@ -49,7 +49,7 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 580px) {
 
     html {
         font-size: 60%;
@@ -67,7 +67,7 @@
         height: 100%;
         width: 100%;
         z-index: 10;
-
+        
         .nav-background {
             position: fixed;
             top: 0;
@@ -76,7 +76,7 @@
             width: 100vw;
             background-color: rgba($color-black, .6);
             z-index: 10;
-            transition: all .2s;
+            transition: all .5s;
         }
         
         .navigation__checkbox:checked {
@@ -111,6 +111,10 @@
                 right: 50%;
                 transform: translate(45%, -50%);
                 transition: all .4s;
+
+                h1 {
+                    font-size: 250%;
+                }
             }
         }
     }
@@ -138,7 +142,7 @@
 
             &__icon {
                 position: relative;
-                top: 44%;
+                top: 57%;
                 transform: translateY(-50%) rotate(90deg);
                 transition: all .4s;
 

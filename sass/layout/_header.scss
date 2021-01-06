@@ -1,11 +1,13 @@
 header {
     height: 10.1rem;
+    border-bottom: $endline-height solid #323746;
+
     .header {
         height: 9.5rem;
         position: relative;
         background-color: $header-color;
 
-        & > * { margin: 0 4rem;}
+        & > * { margin: 0 6%;}
          
         &__title {
             position: absolute;
@@ -13,6 +15,10 @@ header {
             transform: translateY(-50%);
 
             h1 {
+                height: 100%;
+                width: 100%;
+                font-size: 3.5vw;
+
                 &::after {
                     height: 100%;
                     width: 100%;
@@ -21,12 +27,6 @@ header {
                     font-size: inherit;
                 }
             }
-        }
-
-        &__bottom {
-            display: block;
-            height: .6rem;
-            background-color: #323746;
         }
     }
 }

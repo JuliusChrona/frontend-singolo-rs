@@ -315,27 +315,28 @@ body {
     transform: translateY(-50%) scale(0.8); }
 
 header {
-  height: 10.1rem; }
+  height: 10.1rem;
+  border-bottom: 0.6rem solid #323746; }
   header .header {
     height: 9.5rem;
     position: relative;
     background-color: #2d303a; }
     header .header > * {
-      margin: 0 4rem; }
+      margin: 0 6%; }
     header .header__title {
       position: absolute;
       top: 50%;
       transform: translateY(-50%); }
-      header .header__title h1::after {
+      header .header__title h1 {
         height: 100%;
         width: 100%;
-        content: "\002A";
-        color: #f06c64;
-        font-size: inherit; }
-    header .header__bottom {
-      display: block;
-      height: .6rem;
-      background-color: #323746; }
+        font-size: 3.5vw; }
+        header .header__title h1::after {
+          height: 100%;
+          width: 100%;
+          content: "\002A";
+          color: #f06c64;
+          font-size: inherit; }
 
 .navigation {
   height: 100%;
@@ -382,40 +383,34 @@ header {
   .navigation__link--current:visited, .navigation__link--current:link {
     color: #f06c64; }
 
+.nav-background {
+  background-color: transparent;
+  height: 0; }
+
 .section-slider {
   background-color: #f06c64;
-  height: 61.5rem; }
-  .section-slider__bottom {
-    height: 0.6rem;
-    background-color: #ea676b; }
+  height: 61.5rem;
+  border-bottom: 0.6rem solid #ea676b; }
 
 .section-services {
   height: 50.1rem;
-  background-color: #f2f2f2; }
-  .section-services__bottom {
-    height: 0.6rem;
-    background-color: #fff; }
+  background-color: #f2f2f2;
+  border-bottom: 0.6rem solid #fff; }
 
 .section-portfolio {
   height: 87.6rem;
-  background-color: #2d303a; }
-  .section-portfolio__bottom {
-    height: 0.6rem;
-    background-color: #323746; }
+  background-color: #2d303a;
+  border-bottom: 0.6rem solid #323746; }
 
 .section-about {
   height: 73.4rem;
-  background-color: #f2f2f2; }
-  .section-about__bottom {
-    height: 0.6rem;
-    background-color: #fff; }
+  background-color: #f2f2f2;
+  border-bottom: 0.6rem solid #fff; }
 
 .section-quote {
   height: 65.4rem;
-  background-color: #f06c64; }
-  .section-quote__bottom {
-    height: 0.6rem;
-    background-color: #ea676b; }
+  background-color: #f06c64;
+  border-bottom: 0.6rem solid #ea676b; }
 
 @media (max-width: 768px) {
   body {
@@ -443,7 +438,7 @@ header {
   .quote__form {
     width: 65%; } }
 
-@media (max-width: 375px) {
+@media (max-width: 580px) {
   html {
     font-size: 60%; }
   body {
@@ -464,7 +459,7 @@ header {
       width: 100vw;
       background-color: rgba(0, 0, 0, 0.6);
       z-index: 10;
-      transition: all .2s; }
+      transition: all .5s; }
     header .navigation__checkbox:checked ~ .header .navigation {
       opacity: 0;
       width: 0; }
@@ -482,6 +477,8 @@ header {
         right: 50%;
         transform: translate(45%, -50%);
         transition: all .4s; }
+        header .header__title h1 {
+          font-size: 250%; }
   .navigation {
     position: fixed;
     height: 100vh;
@@ -502,7 +499,7 @@ header {
       cursor: pointer; }
     .navigation__icon {
       position: relative;
-      top: 44%;
+      top: 57%;
       transform: translateY(-50%) rotate(90deg);
       transition: all .4s; }
       .navigation__icon, .navigation__icon::before, .navigation__icon::after {
