@@ -9,7 +9,7 @@ const Footer = () => {
                 <li className="social__item">
                     <a href="#" className="social__link"><img src="./img/facebook.png" alt="" className="social__pict" /></a>
                 </li>
-                <li class="social__item">
+                <li className="social__item">
                     <a href="#" className="social__link"><img src="./img/google+.png" alt="" className="social__pict" /></a>
                 </li>
                 <li className="social__item">

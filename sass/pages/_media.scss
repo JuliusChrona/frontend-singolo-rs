@@ -172,10 +172,6 @@
                 transform: rotate(0deg);
             }
 
-            &__checkbox:checked:has(&) {
-                display: none;
-            }
-
             &__list {
                 margin: 0;
                 position: absolute;
@@ -266,7 +262,7 @@
 
         &__contacts {
             width: 100%;
-            position: none;
+            position: initial;
         }
 
         &__info p {

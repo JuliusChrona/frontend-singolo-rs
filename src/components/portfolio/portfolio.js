@@ -1,7 +1,29 @@
-import React from 'react';
-import ReactDOM, { render } from 'react-dom';
+import React, { useState, useContext } from 'react';
+
+import Collage from '../collage';
+
+const FilterContext = React.createContext();
+
+const FilterItem = ({ text }) => {
+    const [filter, changeFilter] = useContext(FilterContext);
+    const filterClass = "filter__link" + (filter == text ? " filter__link--active" : "");
+
+    return (
+    <li key={"key" + text} className="filter__title">
+        <a href="#" className={ filterClass } onClick={(e) => changeFilter(e)}>
+            {text}
+        </a>
+    </li>
+    )
+};
 
 const Portfolio = () => {
+    const [filter, setFilter] = useState("All");
+    const changeFilter = (e) => {
+        e.preventDefault();
+        setFilter(e.target.innerHTML || e.target.innerText);
+    };
+
     return (
         <section className="section-portfolio" id="portfolio">
             <div className="portfolio">
@@ -12,43 +34,19 @@ const Portfolio = () => {
                     Duis mollis, non commodo luctus, nisi, erat porttitot ligula,
                     eget lacinia odio sem nec elit.
                 </p>
-                <ul className="filter u-margin-bottom-small">
-                    <li className="filter__title"><a href="#" className="filter__link filter__link--active">All</a></li>
-                    <li className="filter__title"><a href="#" className="filter__link">Web Design</a></li>
-                    <li className="filter__title"><a href="#" className="filter__link">Graphic Design</a></li>
-                    <li className="filter__title"><a href="#" className="filter__link">Artwork</a></li>
-                </ul>
-                <div className="collage">
-                    <img src="./img/collage_img/image_1.png"
-                        alt="" className="collage__image" />
-                    <img src="./img/collage_img/image_2.png"
-                        alt="" className="collage__image" />
-                    <img src="./img/collage_img/image_3.png"
-                        alt="" className="collage__image" />                        
-                    <img src="./img/collage_img/image_4.png"
-                        alt="" className="collage__image" />                        
-                    <img src="./img/collage_img/image_5.png"
-                        alt="" className="collage__image" />                        
-                    <img src="./img/collage_img/image_6.png"
-                        alt="" className="collage__image" />                        
-                    <img src="./img/collage_img/image_7.png"
-                        alt="" className="collage__image" />                        
-                    <img src="./img/collage_img/image_8.png"
-                        alt="" className="collage__image" />                        
-                    <img src="./img/collage_img/image_9.png"
-                        alt="" className="collage__image" />                        
-                    <img src="./img/collage_img/image_10.png"
-                        alt="" className="collage__image" />
-                    <img src="./img/collage_img/image_11.png"
-                        alt="" className="collage__image" />
-                    <img src="./img/collage_img/image_12.png"
-                        alt="" className="collage__image" />
-                    <img src="./img/collage_img/image_12.png"
-                        alt="" className="collage__image" />
-                </div>
+                <FilterContext.Provider value={[filter, changeFilter]}>
+                    <ul className="filter u-margin-bottom-small">
+                        <FilterItem text="All" />
+                        <FilterItem text="Web Design" />
+                        <FilterItem text="Graphic Design" />
+                        <FilterItem text="Artwork" />
+                    </ul>
+                <Collage />
+                </FilterContext.Provider>
             </div>
         </section>
     )
 };
 
 export default Portfolio;
+export { FilterContext };

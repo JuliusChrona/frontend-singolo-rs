@@ -304,7 +304,6 @@ body {
     left: 0;
     transform: translateY(-50%);
     display: inline-block;
-    vertical-align: center;
     color: #666d89;
     font-size: 1.2rem; }
   .footer__social {
@@ -329,8 +328,7 @@ header {
       transform: translateY(-50%); }
       header .header__title h1 {
         height: 100%;
-        width: 100%;
-        font-size: 3.5vw; }
+        width: 100%; }
         header .header__title h1::after {
           height: 100%;
           width: 100%;
@@ -519,8 +517,6 @@ header {
     .navigation__checkbox:checked + .navigation__button .navigation__icon {
       z-index: 15;
       transform: rotate(0deg); }
-    .navigation__checkbox:checked:has(.navigation) {
-      display: none; }
     .navigation__list {
       margin: 0;
       position: absolute;
@@ -573,7 +569,7 @@ header {
       width: 100%; }
     .quote__contacts {
       width: 100%;
-      position: none; }
+      position: initial; }
     .quote__info p {
       margin-bottom: 0 !important; }
     .quote .quote-form__btn {

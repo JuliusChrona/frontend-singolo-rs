@@ -12,11 +12,13 @@ const App = () => {
     return (
         <Fragment>
             <Header />
-            <Slider />
-            <Services />
-            <Portfolio />
-            <About />
-            <Quote />
+            <main>
+                <Slider />
+                <Services />
+                <Portfolio />
+                <About />
+                <Quote />
+            </main>
             <Footer />
         </Fragment>
     )
